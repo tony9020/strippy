@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { motion } from 'framer-motion';
+import MyModal from './Modal';
 
 interface SectionProps {
   title: string;
@@ -11,6 +12,11 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({ title, description, images, button, className, sub }) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
   return (
     <motion.section
       className={`py-10 px-5 min-h-screen ${className}`}
@@ -40,14 +46,16 @@ const Section: React.FC<SectionProps> = ({ title, description, images, button, c
       <motion.p className="text-xl mb-10 text-brown-500" whileHover={{ scale: 1.02 }}>
         {sub}
       </motion.p>
-      {button && (
+      {button && button.text ==='Open Modal' &&(
         <motion.button
           className="bg-buttonBg text-buttonText px-4 py-2 rounded"
           whileHover={{ scale: 1.1 }}
+          onClick={openModal}
         >
           {button.text}
         </motion.button>
       )}
+       <MyModal isOpen={isOpen} onClose={closeModal} />
     </motion.section>
   );
 };

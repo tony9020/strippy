@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import Section from '../components/Section';
 import Carousel from '../components/Carousel';
+import ImageSlider from '../components/ImageSlider';
 import ShuffleText from 'shuffle-text';
 import { Parallax, Background } from 'react-parallax';
+import { SlideData } from '@/components/ImageData';
 
 
 interface SectionData {
@@ -69,8 +71,8 @@ export default function Home() {
       <div className="py-10 px-5 text-center min-h-screen gradient-3">
         <h1 id="myText" className="text-5xl mb-4 text-yellow-400">Sketches</h1>
         <p className="text-2xl mb-4 text-pink-500">Our latest sketches.</p>
-        <div className="w-full h-full">
-          <Carousel images={sections[5].images} />
+        <div className="w-full h-full flex items-center justify-center">
+          <ImageSlider />
         </div>
       </div>
       {showModal && (
