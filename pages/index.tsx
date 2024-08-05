@@ -10,7 +10,7 @@ interface SectionData {
   description: string;
   sub: string;
   images?: string[];
-  button?: { text: string; onClick: () => void };
+  button?: { text: string;};
   className: string;
   bg?: string[];
 }
@@ -20,16 +20,16 @@ const sections: SectionData[] = [
   { title: 'Welcome to Strippy', description: '- the wildest corner of the NFT universe where our main feline, Trippy Cat, reigns supreme!', images: ['/image1.gif'], className: 'gradient-1', bg: ['/bg.jpg'], sub:''},
   { title: '', description: 'Ever wondered what happens when you mix a cat with a kaleidoscope and sprinkle a dash of cosmic dust?', images: ['/image2.jpg'], className: 'gradient-2',bg: ['/bg.jpg'], sub:'' },
   { title: 'Tokenomies', description: 'Alright, cool cats, let’s talk tokenomics – the funky science behind our groovy NFT ecosystem.', images: ['/image3.jpg'], className: 'gradient-3',bg: ['/bg.jpg'],sub:'Total Supply: There are only 10,000 Trippy Cats in the universe.  Each one is as unique as a snowflake but way more colorful and trippy.  Rarity: From common kitties to legendary felines, the rarity of your Trippy Cat determines just how much swagger it brings to your collection. The rarer, the trippier!  Minting: Want to mint your own Trippy Cat? Just a few clicks, a sprinkle of digital magic, and voilà – your very own piece of psychedelic art!  Staking & Rewards: Stake your Trippy Cats to earn MeowCoins – the official currency of Strippy. Use them to get exclusive access to special drops, events, and more. Plus, who doesn’t love earning while holding onto their favorite feline friend?  Community: Join the Strippy community and connect with fellow cat lovers, traders, and dreamers. Share your trippy experiences, trade your cats, and be part of the most vibrant, colorful, and downright fun NFT community out there.' },
-  { title: 'How to Buy', description: 'You get Trippy Cat – the grooviest, far-out feline that’s here to take you on a psychedelic adventure. Whether you’re a seasoned NFT collector or just a curious wanderer, Strippy is your portal to a world where reality bends, colors pop, and cats rule.', images: ['/image4.jpg'], button: { text: 'Buy Now!', onClick: () => {} }, className: 'gradient-4',bg: ['/bg.jpg'], sub:'' },
+  { title: 'How to Buy', description: 'You get Trippy Cat – the grooviest, far-out feline that’s here to take you on a psychedelic adventure. Whether you’re a seasoned NFT collector or just a curious wanderer, Strippy is your portal to a world where reality bends, colors pop, and cats rule.', images: ['/image4.jpg'], button: { text: 'Buy Now!' }, className: 'gradient-4',bg: ['/bg.jpg'], sub:'' },
   {
     title: 'PFP',
     description: 'Get your unique profile picture.',
-    button: { text: 'Open Modal', onClick: () => setShowModal(true) },
+    button: { text: 'Open Modal' },
     className: 'gradient-1',
     bg: ['/bg.jpg'],
     sub:''
   },
-  { title: 'Join our community.', description: '', images: ['/image5.jpg'], button: { text: 'Follow us', onClick: () => {} }, className: 'gradient-2',bg: ['/bg.jpg'], sub:'Hop on, fellow traveler, and let’s dive into the trippy, whimsical world of Strippy! ' },
+  { title: 'Join our community.', description: '', images: ['/image5.jpg'], button: { text: 'Follow us' }, className: 'gradient-2',bg: ['/bg.jpg'], sub:'Hop on, fellow traveler, and let’s dive into the trippy, whimsical world of Strippy! ' },
   {
     title: 'Sketches',
     description: 'Our latest sketches.',

@@ -5,7 +5,7 @@ interface SectionProps {
   title: string;
   description: string;
   images?: string[];
-  button?: { text: string, onClick: () => void };
+  button?: { text: string};
   className?: string;
   sub?: string;
 }
@@ -42,7 +42,6 @@ const Section: React.FC<SectionProps> = ({ title, description, images, button, c
       </motion.p>
       {button && (
         <motion.button
-          onClick={button.onClick}
           className="bg-buttonBg text-buttonText px-4 py-2 rounded"
           whileHover={{ scale: 1.1 }}
         >
